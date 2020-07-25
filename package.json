@@ -1,0 +1,16 @@
+{
+  "name": "PlatziVideo",
+  "version": "1.0.0",
+  "description": "Posible futura descripcion",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Nicolas Castañeda",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
