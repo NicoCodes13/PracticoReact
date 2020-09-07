@@ -7,11 +7,11 @@ import userIcon from '../assets/static/user-icon.png';
 //componente creacional
 const Header = () => (
   <header className='header'>
-    <img className='header__img' src={logo} alt='Platzi Video'></img>
+    <img className='header__img' src={logo} alt='Platzi Video' />
     <div className='header__menu'>
       <div className='header__menu--profile'>
-        <img src={userIcon} alt=''></img>
-        <p>Perfil</p>{' '}
+        <img src={userIcon} alt='' />
+        <p>Perfil</p>
       </div>
       <ul>
         <li>
