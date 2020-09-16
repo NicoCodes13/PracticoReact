@@ -19,31 +19,20 @@ const App = () => {
     <div className='app'>
       <Header />
       <Search />
-
-      {videos.mylist.lenght > 0 && (
-        <Categories title='Mi lista'>
-          <Carousel>
-            {videos.trends.map((item) => (
-              <CarouselItem key={item.id} {...item} />
-            ))}
-          </Carousel>
-        </Categories>
+      {categories.map(
+        (category) =>
+          // eslint-disable-next-line implicit-arrow-linebreak
+          videos[category].length > 0 && ( // operando por cortocircuito
+            <Categories key={category} title={category}>
+              <Carousel>
+                {videos[category].map((item) => (
+                  <CarouselItem key={item.id} {...item} />
+                ))}
+              </Carousel>
+            </Categories>
+            // eslint-disable-next-line comma-dangle
+          )
       )}
-
-      <Categories title='Tendencias'>
-        <Carousel>
-          {videos.trends.map((item) => (
-            <CarouselItem key={item.id} {...item} />
-          ))}
-        </Carousel>
-      </Categories>
-
-      <Categories title='Originales de Platzi Video'>
-        <Carousel>
-          <CarouselItem />
-        </Carousel>
-      </Categories>
-
       <Footer />
     </div>
   );
