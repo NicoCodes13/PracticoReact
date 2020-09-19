@@ -7,7 +7,7 @@ const InputPlaceHolder = 'Buscar...';
 const Search = () => (
   <section className='main'>
     <h2 className='main__title'>{MainTitleText}</h2>
-    <input type='text' className='input' placeholder={InputPlaceHolder}></input>
+    <input type='text' className='input' placeholder={InputPlaceHolder} />
   </section>
 );
 
