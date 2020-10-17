@@ -1,4 +1,5 @@
 {
+  "homepage": "https://nickcar13.github.io/PracticoReact",
   "name": "PlatziVideo",
   "version": "1.0.0",
   "description": "Posible futura descripcion",
@@ -6,7 +7,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --open --mode development"
+    "start": "webpack-dev-server --open --mode development",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "Nicolas Castañeda",
@@ -29,6 +32,7 @@
     "babel-loader": "^8.1.0",
     "css-loader": "^4.0.0",
     "file-loader": "^6.0.0",
+    "gh-pages": "^3.1.0",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
     "mini-css-extract-plugin": "^0.9.0",
