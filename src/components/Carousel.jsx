@@ -2,9 +2,9 @@ import React from 'react';
 import '../assets/styles/components/Carousel.scss';
 
 const Carousel = ({ children }) => (
-  <section className='carousel'>
+  <article className='carousel'>
     <div className='carousel__container'>{children}</div>
-  </section>
+  </article>
 );
 
 export default Carousel;

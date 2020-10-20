@@ -16,25 +16,27 @@ const App = () => {
   const [videos, categories] = useInitialState(API);
 
   return (
-    <div className='app'>
+    <React.Fragment className='app'>
       <Header />
-      <Search />
-      {categories.map(
-        (category) =>
-          // eslint-disable-next-line implicit-arrow-linebreak
-          videos[category].length > 0 && ( // operando por cortocircuito
-            <Categories key={category} title={category}>
-              <Carousel>
-                {videos[category].map((item) => (
-                  <CarouselItem key={item.id} {...item} />
-                ))}
-              </Carousel>
-            </Categories>
-            // eslint-disable-next-line comma-dangle
-          )
-      )}
+      <main>
+        <Search />
+        {categories.map(
+          (category) =>
+            // eslint-disable-next-line implicit-arrow-linebreak
+            videos[category].length > 0 && ( // operando por cortocircuito
+              <Categories key={category} title={category}>
+                <Carousel>
+                  {videos[category].map((item) => (
+                    <CarouselItem key={item.id} {...item} />
+                  ))}
+                </Carousel>
+              </Categories>
+              // eslint-disable-next-line comma-dangle
+            )
+        )}
+      </main>
       <Footer />
-    </div>
+    </React.Fragment>
   );
 };
 
