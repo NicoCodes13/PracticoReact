@@ -3,6 +3,7 @@
   padding-left: 30px;
   width: 100%;
   position: relative;
+  scrollbar-width: none;
 }
 
 .carousel__container {
@@ -23,8 +24,4 @@
   -webkit-transform: scale(1.5);
   transform: scale(1.5);
   opacity: 1;
-}
-
-.carousel::-webkit-scrollbar {
-  display: none;
 }
